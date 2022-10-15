@@ -6,8 +6,11 @@
 
 ## Prueba para Analista de Desarrollo en PHP de Konecta
 
-A continuación, se mostrará los comandos que debe ejecutar para correr el proyecto el proyecto:
+A continuación, se mostrará los pasos para correr el proyecto:
 
-- composer install
-- php artisan migrate --seed
-- php artisan serv
+- Ejecutar composer install
+- Crear la base de datos
+- Crear un archivo .env igual al que se muestra en .env.example
+- De la linea 9 a la 14 del archivo .env se encuentran las variables para configurar la base de datos (DB_CONNECTION, DB_HOST, DB_DATABASE, DB_USERNAME, DB_PASSWORD)
+- Ejecutar php artisan migrate --seed
+- Ejecutar php artisan serve
