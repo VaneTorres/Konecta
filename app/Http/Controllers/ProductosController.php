@@ -110,10 +110,10 @@ class ProductosController extends Controller
                 $producto->stock = $producto->stock - $request->data['carrito'][$i]['cantidad'];
                 $producto->save();
             } else {
-                return response()->json(['mensaje'=>'No hay suficiente stock del producto '.$producto->nombre]);
+                return response()->json(['mensaje'=>'No hay suficiente stock del producto '.$producto->nombre], 400);
             }
         }
-        return response()->json(['mensaje'=>'Venta realizada correctamente']);
+        return response()->json(['mensaje'=>'Venta realizada correctamente'], 200);
     }
     public function filtrarStrock()
     {
